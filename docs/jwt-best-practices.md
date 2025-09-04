@@ -1,20 +1,20 @@
-# JWT安全实现最佳实践
+#JWT Security Implementation Best Practices
 
-## 1. 签名验证要求
-- 必须使用非对称加密算法（推荐RS256）
-- 禁止使用none算法（无签名）
-- 必须验证签名是否有效
-- 定期轮换签名密钥（至少每90天）
+## 1. Signature verification requirements
+-Asymmetric encryption algorithm must be used (recommended RS256)
+-Prohibit the use of the none algorithm (unsigned)
+-It is necessary to verify the validity of the signature
+-Regularly rotate signature keys (at least every 90 days)
 
-## 2. 令牌验证 checklist
-- 验证`exp`（过期时间）声明
-- 验证`iat`（签发时间）合理性
-- 验证`iss`（签发者）和`aud`（受众）
-- 检查是否包含`nbf`（生效时间）并验证
-- 验证`sub`（主题）是否有效
+## 2. Token verification checklist
+-Verify the 'exp' (expiration time) declaration
+-Verify the reasonableness of the 'iat' (issuance time)
+-Verify 'iss' (issuer) and' aud '(audience)
+-Check if 'nbf' (effective time) is included and verify
+-Verify if the 'sub' (theme) is valid
 
-## 3. 安全存储建议
-- 避免在客户端存储敏感信息
-- 访问令牌有效期不应超过15分钟
-- 实现令牌撤销机制
-- 使用HTTPS传输所有JWT相关通信
+## 3. Suggestions for secure storage
+-Avoid storing sensitive information on the client side
+-The validity period of the access token should not exceed 15 minutes
+-Implement token revocation mechanism
+-Use HTTPS to transmit all JWT related communications
