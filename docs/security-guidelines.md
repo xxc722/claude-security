@@ -1,25 +1,25 @@
-# 安全漏洞修复工作流规范
+#Workflow specification for security vulnerability repair
 
-## 1. 分支命名规范
-- 紧急安全修复：`hotfix/[vulnerability-type]-[version]`
-  - 示例：`hotfix/auth-bypass-v2.1.3`
-- 常规安全更新：`security/[cve-id]-[brief-description]`
+## 1. Branch naming conventions
+-Emergency security fix: ` hotfix/[vulnerability type] - [version]`
+-Example: ` hotfix/uth-bypass-v2.1.3 '`
+-Regular security update: ` security/[ve id] - [brief description]`
 
-## 2. 安全工单必填内容
-- 漏洞标题必须包含严重级别和CVE编号
-- 必须包含受影响版本范围
-- 必须提供CVSS评分和风险评估
-- 必须包含初步修复计划
+## 2. Required content for safety work order
+-The vulnerability title must include the severity level and CVE number
+-Must include the affected version range
+-CVSS score and risk assessment must be provided
+-Must include a preliminary repair plan
 
-## 3. 安全PR审查要点
-- 代码是否遵循最小权限原则
-- 认证/授权逻辑是否完整
-- 是否添加了必要的安全测试
-- 是否更新了相关文档
-- 是否存在潜在的副作用
+## 3. Key points of safety PR review
+-Does the code follow the principle of minimum privilege
+-Is the authentication/authorization logic complete
+-Have necessary security tests been added
+-Have the relevant documents been updated
+-Are there any potential side effects
 
-## 4. 安全测试要求
-- 必须包含单元测试覆盖修复代码
-- 必须通过SAST静态代码分析
-- 高风险漏洞必须进行渗透测试验证
-- 必须验证修复不会引入新漏洞
+## 4. Security testing requirements
+-Must include unit test coverage repair code
+-Must be analyzed through SAST static code analysis
+-High risk vulnerabilities must undergo penetration testing verification
+-Must verify that the fix does not introduce new vulnerabilities
