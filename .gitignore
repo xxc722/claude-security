@@ -1,0 +1,19 @@
+# 环境变量与敏感信息
+.env
+.env.local
+
+# 安全扫描报告
+security-report.json
+
+# 个人IDE配置
+.idea/
+.vscode/
+*.sublime-project
+
+# 日志文件
+logs/
+*.log
+
+# 临时文件
+tmp/
+*.tmp
